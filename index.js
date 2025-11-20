@@ -2,8 +2,10 @@ const express = require("express");
 const multer = require("multer");
 const path = require("path");
 const fs = require("fs");
+const cors = require("cors");
 
 const app = express();
+app.use(cors());
 
 // cartelle per upload e master
 const uploadDir = path.join(__dirname, "uploads");
